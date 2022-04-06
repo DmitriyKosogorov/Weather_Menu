@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Fragment</string>
+    <string name="temperature">temperature</string>
+    <string name="wind">wind</string>
+    <string name="feels_like">feels like</string>
+    <string name="pressure">pressure</string>
+    <string name="description">description</string>
+    <string name="clouds">clouds</string>
+    <string name="find">find</string>
+    <string name="short_ver">short version</string>
+    <string name="full_ver">full version</string>
+</resources>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<data>
+    <variable name="weather" type="com.example.fragment.Weather"/>
+</data>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <EditText
+        android:id="@+id/City"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPersonName"
+        android:text="City"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toTopOf="@id/toolbar" />
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/container_fragm"
+        android:layout_below="@+id/City">
+
+    </FrameLayout>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/find"
+        android:text="@string/find"
+        android:layout_below="@id/container_fragm"
+        android:onClick="onClick"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/error"
+        android:layout_below="@id/find"
+        android:text="@{weather.error}"
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/short_ver"
+        android:id="@+id/short_ver"
+        android:layout_below="@id/error" />
+
+    <Button
+        android:id="@+id/full_ver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/error"
+        android:layout_toEndOf="@id/short_ver"
+        android:layout_marginLeft="10dp"
+        android:text="@string/full_ver" />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="design"
+        android:id="@+id/design_btn"
+        android:layout_below="@id/short_ver" />
+
+</RelativeLayout>
+</layout>
